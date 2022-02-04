@@ -1,0 +1,71 @@
+
+<view class="navigationBar">
+   <text bindtap="back" decode='true' style="color:#fff;margin-top:97rpx;height:50rpx;font-size:45rpx;margin-left:30rpx">&lt;</text>
+   <view style="color:#fff;margin-top:110rpx;height:50rpx;margin-left:270rpx">{{name[0].name}}</view>
+</view>
+
+
+<view class="background">
+   <image style="width:750rpx;height:800rpx" src="{{name[0].src}}"></image>
+</view>
+
+
+<view class="index1" style="position: absolute; left: 0rpx; top: 696rpx">
+      <view class="describe">
+         <text style="color:#fff;font-size:35rpx;margin-left:5%">{{name[0].name}}</text>
+         <view class="price">
+            <text style="font-size:25rpx">{{name[0].chaPic_list.length}}人{{name[0].describe}}</text>
+            <text style="color:purple;margin-left:400rpx">￥{{name[0].price}}</text>
+            <text style="font-size:25rpx">/人</text>
+         </view>
+
+
+         <view class="score">
+            <text style="font-size:25rpx;color:purple;margin-left:10rpx">难度</text>
+             <block wx:for="{{idx}}">
+                <image src="{{'https://i.ibb.co/4TBMw18/star-favorite-rating-important-512.webp'}}" style="width:30rpx;height:30rpx"></image>
+             </block>
+             <!-- <text style="font-size:25rpx;margin-left:335rpx;color:purple">城限  演绎</text> -->
+         </view>
+
+         <view class="reserve">
+            <view class="tj" >
+                <!-- <image style="width:50rpx;height:50rpx" src="cloud://cloud1-0gdn563645acdabe.636c-cloud1-0gdn563645acdabe-1305317513/icon/热门推荐.png"></image> -->
+                <view>{{people_count}}</view>
+                <text style="margin-top:15rpx" >报名人数</text>
+            </view>
+            <view class="line"></view>
+            <view class="tj"  bindtap="taptest">
+                <image style="width:50rpx;height:50rpx" src="cloud://cloud1-0gdn563645acdabe.636c-cloud1-0gdn563645acdabe-1305317513/icon/猜你喜欢.png"></image>
+                <text style="margin-top:15rpx">点我报名</text>
+            </view>
+            <view class="line"></view>
+            <view class="tj">
+                <image style="width:50rpx;height:50rpx" src="cloud://cloud1-0gdn563645acdabe.636c-cloud1-0gdn563645acdabe-1305317513/icon/转发.png"></image>
+                <button class='button' style="width:250rpx;height:60rpx;line-height:40rpx;" open-type="share" >给朋友看</button>
+            </view>
+         </view>
+
+         <view class="jben">
+            <text>剧本简介</text>
+            <text style="margin-right:5%;font-size:25rpx;margin-top:20rpx">{{name[0].Introduction}}</text>
+           
+         </view>
+         <view class="line_bottom"></view>
+
+
+
+         <view class="role">
+             <text style="margin-top:20rpx">角色介绍</text>
+             <scroll-view scroll-x="true" class="cc">
+                    <block wx:for="{{name[0].chaPic_list}}">
+                    <view class="cc_1">
+                          <image style="width:150rpx;height:200rpx" src="{{item}}"></image>
+                          <view>{{name[0].chaName_list[index]}}</view>
+                    </view>
+                    </block>
+             </scroll-view> 
+         </view>
+      </view>
+</view>
+

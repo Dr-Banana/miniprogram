@@ -1,0 +1,41 @@
+<view class="navigationBar">
+   <text bindtap="back" decode='true' style="color:#000000;margin-top:97rpx;height:50rpx;font-size:45rpx;margin-left:30rpx">&lt;</text>
+</view>
+
+<view style="top: 200rpx;width:750rpx;left:0rpx;position: absolute;">
+  <!-- title -->
+  <view style=" width: 100%;height: 100rpx;text-align: center;justify-content: center;align-items: center;">
+    <view style="color: rgb(0, 119, 255);font-size: 40rpx;font-weight: 900;">活动报名表</view>
+  </view>
+  <view style="padding: 0 0 30rpx 0">
+    <text style="padding: 0 0 0 40rpx;color: rgb(0, 119, 255);font-size: 25rpx;font-weight: 900;">注：带 ※ 内容为必须填写项</text>
+  </view>
+  <!-- name -->
+  <!-- time select -->
+  <view class="section">
+    <view class="section__title"> ※ 点击滑动选择活动日期</view>
+    <picker indicator-style="height: 50px;"  bindchange="pickerChange" range="{{time}}">
+      <view class="picker">{{time[timeIndex]}}</view>
+    </picker>
+  </view>
+  <!-- 备注 -->
+  <view class="section">
+    <view class="section__title">备注</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <textarea class="picker" auto-focus placeholder="请写入同行者或是其他备注" bindinput="note" style="height: 200rpx" maxlength="-1"/>
+      </view>
+    </view>
+  </view>
+  <!-- warning -->
+  <view style="padding: 100rpx 30rpx 0 30rpx;color: rgb(255，0，0)">
+    <text style="font-size: 25rpx;font-weight: 900;">须知：\n 1.报名成功后需添加群内工作人员付款，以完成报名。\n 2.为了避免玩家跳车，须在原有价格基础上加10🔪押金，游戏开始后便会退还。\n 3.如报名后无法参加活动，提前24小时通知工作人员可退还全部押金，小于24小时则无法退还押金，请您谅解。\n 4.如需更改预约请联系群内工作人员为您进行后台修改。</text>
+  </view>
+  <!-- submit -->
+  <view style="margin-top: 10rpx;width:100%;height:100rpx"></view>
+  <view style=" width: 100%;text-align: center;justify-content: center;align-items: center;">
+    <button type="primary" bindtap="rg">确认提交</button>
+  </view>
+  <view style="width:100%;height:100rpx"></view>
+</view>
+ 

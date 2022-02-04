@@ -1,0 +1,18 @@
+
+
+<view class="bb">
+    <swiper  previous-margin='60px' next-margin='50px' bindchange='a' class="bb_1"  circular="true">
+        <swiper-item  class="swiper-item" wx:for="{{arr}}"  >
+          <image data-index="{{item.name}}" bindtap="select" style="width:500rpx;height:650rpx;border-radius:20rpx" src="{{item.src}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="describe">
+      <view style="margin-top:30rpx;color:#fff;font-size:50rpx">{{name}}</view>
+      <view style="margin-top:20rpx;color:white">{{describe}}</view>
+      <view style="color:rgb(255,165,0);margin-top:30rpx;font-size:35rpx;font-weight:600">￥{{price}}元/人</view>
+    </view>
+</view>
+
+<view class="background">
+     <image  style="width:750rpx;height:100vh;filter: blur(20rpx);transition: background .3s ease-in-out;"  src="{{pic}}"></image>
+</view>

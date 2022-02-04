@@ -1,0 +1,27 @@
+.bb{
+  position:fixed;
+  top: 350rpx;
+  z-index: 9;
+}
+.bb_1{
+  display: flex;
+  width: 750rpx;
+  height:650rpx;
+ 
+}.background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}.swiper-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}.describe{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
